@@ -89,8 +89,9 @@ while True:
                     print("第二次挑戰，time++")
                     flg=0
                     time.sleep(70)
-    cttr+=1
+    
     print("循環" ,cttr,"結束\n")
+    cttr+=1
 
 
 
