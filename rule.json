@@ -1,0 +1,61 @@
+{
+    "rule_name":"wf",
+    "rule_det":
+    [
+        {
+            "id":1,
+            "file_name":"spw1.png",
+            "name":"超級 第1戰",
+            "wait_time":5
+        },
+        {
+            "//ee":"如果按繼續挑戰就不會跳這個",
+            "id":2,
+            "file_name":"spw2.png",
+            "name":"超級 第2戰",
+            "wait_time":0
+        },
+        {
+            "id":3,
+            "file_name":"er.png",
+            "name":"取消",
+            "wait_time":0
+        },
+        {
+            "id":4,
+            "file_name":"go.png",
+            "name":"挑戰",
+            "wait_time":50
+        },
+        {
+            "id":5,
+            "file_name":"next.png",
+            "name":"下一步",
+            "wait_time":5
+        },
+        {
+            "id":6,
+            "file_name":"cont.png",
+            "name":"繼續挑戰",
+            "wait_time":8
+        },
+        {
+            "id":7,
+            "file_name":"ok.png",
+            "name":"OK",
+            "wait_time":8
+        },
+        {
+            "id":8,
+            "file_name":"cont2.png",
+            "name":"再次挑戰",
+            "wait_time":10
+        }
+
+        
+    ],
+    "rule":[1,4,5,6,4,5,7,8],
+    "rule_fail":"er.png"
+
+
+}
