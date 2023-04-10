@@ -25,13 +25,13 @@
             "id":4,
             "file_name":"go.png",
             "name":"挑戰",
-            "wait_time":60
+            "wait_time":50
         },
         {
             "id":5,
             "file_name":"next.png",
             "name":"下一步",
-            "wait_time":5
+            "wait_time":6
         },
         {
             "id":6,
@@ -50,11 +50,17 @@
             "file_name":"cont2.png",
             "name":"再次挑戰",
             "wait_time":10
+        },
+        {
+            "id":9,
+            "file_name":"ct2.png",
+            "name":"再次挑戰2",
+            "wait_time":10
         }
 
         
     ],
-    "rule":[1,4,5,6,4,5,7,8],
+    "rule":[4,5,9],
     "rule_fail":"er.png"
 
 

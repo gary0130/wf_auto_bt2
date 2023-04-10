@@ -12,7 +12,7 @@ def find_pic(target_pic):
                             stdin=subprocess.PIPE,
                             stdout=subprocess.PIPE, shell=True)
     image_bytes = pipe.stdout.read().replace(b'\r\n', b'\n')
-    image = cv2.imdecode(np.fromstring(image_bytes, np.uint8), cv2.IMREAD_COLOR)
+    image = cv2.imdecode(np.frombuffer(image_bytes, np.uint8), cv2.IMREAD_COLOR)
     
 
     #搜尋目標圖片
@@ -26,7 +26,7 @@ def find_pic(target_pic):
     top_left = min_loc #左上角的位置
     bottom_right = (top_left[0] + w, top_left[1] + h) #右下角的位置
     #控制相似度
-    if min_val<0.0001:
+    if min_val<0.01:
         print(target_pic," find at", top_left[0],  top_left[1],"posible",min_val)
         #cv2.rectangle(image,top_left, bottom_right, (0,0,255), 2)
         return top_left[0],  top_left[1]
@@ -83,12 +83,7 @@ while True:
                 print("點擊 " ,x,y," 並休息 ",j["wait_time"])
                 adb_click_of(x,y)
                 time.sleep(j["wait_time"])
-                if flg==0 and j["name"]=="挑戰":
-                    flg=1
-                elif flg==1 and j["name"]=="挑戰":
-                    print("第二次挑戰，time++")
-                    flg=0
-                    time.sleep(70)
+
     
     print("循環" ,cttr,"結束\n")
     cttr+=1
